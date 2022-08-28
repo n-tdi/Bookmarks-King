@@ -1,0 +1,120 @@
+// General
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap');
+body {
+    background-color: #323232;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 88%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
+// Title & Quotes
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title--text {
+        color: #fff;
+        font-size: 3rem;
+        text-shadow:
+            0 0 5px #fff;
+    }
+    padding-bottom: 100px;
+}
+
+// Cards
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 2rem;
+    a {
+        color: black;
+        font-style: none;
+        text-decoration: none;
+    }
+    .card {
+        transition: all .1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border: 2px solid;
+        border-color: #6e6e6e;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px;
+        .card--image__img {
+            max-width: 50%;
+            padding: 10px 0;
+        }
+        .card--title__text {
+            color: rgb(237, 237, 237);
+            font-weight: 300;
+            font-size: 2rem;
+            font-style: normal;
+        }
+        &:hover {
+            cursor: pointer;
+            border-color: #939393;
+            transform: translateY(-5px);
+        }
+    }
+}
+
+
+// Footer
+.bottom {
+    .bottom--shape {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: rgb(35, 35, 35);
+        clip-path: polygon(52% 81%, 56% 71%, 69% 82%, 88% 63%, 100% 85%, 100% 100%, 0 100%, 0 89%, 22% 79%, 33% 66%);
+        z-index: -1;
+    }
+}
+
+// Media Queries
+@media only screen and (max-width: 1350px) {
+    .cards {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+}
+
+@media only screen and (max-width: 750px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .title {
+        padding-bottom: 10px;
+    }
+}
