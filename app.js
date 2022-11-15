@@ -14,7 +14,8 @@ const phrases = Array(
     "Worry is a misuse of imagination",
     "Think about Meera",
     "Whatever kills you makes you stronger",
-    "If Rownox did it, you can"
+    "If Rownox did it, you can",
+    "Emo is nice"
 );
 
 let changeText = () => {
